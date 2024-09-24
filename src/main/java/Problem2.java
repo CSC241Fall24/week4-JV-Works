@@ -1,5 +1,12 @@
 public class Problem2 {
     public static ListNode insert(ListNode head, int val, int position) {
+        ListNode newNode = new ListNode(val);
+        
+        // If inserting at the head (position 0)
+        if (position == 0) {
+            newNode.next = head;
+            return newNode;
+        }
         
         ListNode current = head;
         for (int i = 0; i < position - 1; i++) {
@@ -8,7 +15,7 @@ public class Problem2 {
             }
             current = current.next;
         }
-        ListNode newNode = new ListNode(val);
+        
         if (current != null) {
             newNode.next = current.next;
             current.next = newNode;
