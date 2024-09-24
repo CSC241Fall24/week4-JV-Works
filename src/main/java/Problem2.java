@@ -12,7 +12,7 @@ public class Problem2 {
         int currentPosition = 0;
         
         // Traverse the list to find the correct position
-        while (current.next != null && currentPosition < position) {
+        while (current.next != null && currentPosition < position-1) {
             current = current.next;
             currentPosition++;
         }
