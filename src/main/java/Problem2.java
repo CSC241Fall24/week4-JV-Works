@@ -3,7 +3,7 @@ public class Problem2 {
         ListNode newNode = new ListNode(val);
         
         // If inserting at the head (position 0)
-        if (position == 0) {
+        if (position == 1) {
             newNode = head;
             return newNode;
         }
