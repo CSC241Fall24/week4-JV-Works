@@ -11,17 +11,10 @@ public class Problem2 {
         ListNode current = head;
         int currentPosition = 0;
         
-        // Traverse the list to find the correct position
-        while (current.next != null && currentPosition < position - 1) {
+        // Traverse the list to find the correct position for insertion
+        while (currentPosition < position - 1 && current.next != null) {
             current = current.next;
             currentPosition++;
-        }
-
-        // Handle insertion by checking whether position 1 insertion needs special handling
-        if (position == 1) {
-            ListNode temp = head;
-            newNode.next = temp;
-            return newNode;
         }
         
         // Insert the new node at the correct position
