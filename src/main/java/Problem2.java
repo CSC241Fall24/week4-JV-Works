@@ -9,18 +9,19 @@ public class Problem2 {
         }
         
         ListNode current = head;
-        ListNode prev = null;
-        int i = 0;
-        for (i = 0; i < position && current != null; i++) {
-            prev = current;
+        for (int i = 0; i < position - 1; i++) {
+            if (current == null) {
+                break;
+            }
             current = current.next;
         }
         
-        if (i == position) {
-            prev.next = newNode;
-            newNode.next = current;
+        if (current != null) {
+            newNode.next = current.next;
+            current = newNode;
         } else {
-            // If position is out of bounds, append at the end
+            // If current is null, it means position is out of bounds, so we append at the end
+            current = head;
             while (current.next != null) {
                 current = current.next;
             }
