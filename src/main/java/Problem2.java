@@ -4,7 +4,7 @@ public class Problem2 {
         
         // If inserting at the head (position 0) or the list is empty
         if (position == 0 || head == null) {
-            newNode.next = head;
+            newNode.next = head;  // Insert newNode at the head
             return newNode;
         }
         
@@ -17,7 +17,7 @@ public class Problem2 {
             currentPosition++;
         }
         
-        // Insert the new node
+        // Insert the new node at the correct position
         newNode.next = current.next;
         current.next = newNode;
         
