@@ -10,20 +10,17 @@ public class Problem2 {
         
         ListNode current = head;
         ListNode prev = null;
-        for (int i = 0; i < position; i++) {
-            if (current == null) {
-                break;
-            }
+        int i = 0;
+        for (i = 0; i < position && current != null; i++) {
             prev = current;
             current = current.next;
         }
         
-        if (prev != null) {
+        if (i == position) {
             prev.next = newNode;
             newNode.next = current;
         } else {
-            // If prev is null, it means position is out of bounds, so we append at the end
-            current = head;
+            // If position is out of bounds, append at the end
             while (current.next != null) {
                 current = current.next;
             }
