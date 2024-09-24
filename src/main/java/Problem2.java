@@ -17,17 +17,8 @@ public class Problem2 {
             currentPosition++;
         }
 
-        // Handle insertion by checking whether position 1 insertion needs special handling
-        if (position == 1) {
             ListNode temp = head;
             newNode.next = temp;
             return newNode;
-        }
-        
-        // Insert the new node at the correct position
-        newNode.next = current.next;
-        current.next = newNode.next;
-        
-        return head;
     }
 }
