@@ -4,7 +4,7 @@ public class Problem2 {
         
         // If inserting at the head (position 0)
         if (position == 0) {
-            newNode.next = head;
+            newNode = head;
             return newNode;
         }
         
