@@ -26,6 +26,6 @@ public class Problem2 {
     // Insert the new node at the correct position
     ListNode temp = current.next;
     newNode.next = temp;
-    return newNode;
+    return head;
 }
 }
